@@ -18,7 +18,7 @@ jobs:
       - name: setup dependencies
         run: |
           sudo apt-get update
-          sudo apt-install scons mingw-w64
+          sudo apt-get install scons mingw-w64
 
       - name: test scons
         run: |
