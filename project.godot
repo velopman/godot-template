@@ -45,7 +45,17 @@ _global_script_class_icons={
 [application]
 
 config/name="godot-template"
+run/main_scene="res://source/menus/menu_settings.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Globals="*res://source/autoloads/globals.gd"
+Logger="*res://source/autoloads/logger.gd"
+Time="*res://source/autoloads/time.gd"
+PhysicsTime="*res://source/autoloads/physics_time.gd"
+SceneManager="*res://source/autoloads/scene_manager.gd"
+TaskManager="*res://source/autoloads/task_manager.gd"
 
 [rendering]
 
