@@ -8,9 +8,38 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Reference",
+"class": "BaseTask",
+"language": "GDScript",
+"path": "res://source/tasks/base_task.gd"
+}, {
+"base": "Reference",
+"class": "CurrentQueue",
+"language": "GDScript",
+"path": "res://source/helpers/current_queue.gd"
+}, {
+"base": "Reference",
+"class": "PlayerInput",
+"language": "GDScript",
+"path": "res://source/helpers/player_input.gd"
+}, {
+"base": "Reference",
+"class": "Task",
+"language": "GDScript",
+"path": "res://source/tasks/task.gd"
+}, {
+"base": "Reference",
+"class": "TaskQueue",
+"language": "GDScript",
+"path": "res://source/tasks/task_queue.gd"
+} ]
 _global_script_class_icons={
-
+"BaseTask": "",
+"CurrentQueue": "",
+"PlayerInput": "",
+"Task": "",
+"TaskQueue": ""
 }
 
 [application]
