@@ -52,6 +52,7 @@ config/icon="res://icon.png"
 
 Globals="*res://source/autoloads/globals.gd"
 Event="*res://source/autoloads/event.gd"
+FileManager="*res://source/autoloads/file_manager.gd"
 SettingsManager="*res://source/autoloads/settings_manager.gd"
 Logger="*res://source/autoloads/logger.gd"
 Time="*res://source/autoloads/time.gd"

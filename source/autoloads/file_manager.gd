@@ -1,10 +1,16 @@
 extends Node
 
 
+func file_exists(path: String) -> bool:
+	var file = File.new()
+
+	return file.file_exists("user://%s" % path)
+
+
 func load_file(path: String) -> String:
 	var file = File.new()
 
-	file.open(path, File.READ)
+	file.open("user://%s" % path, File.READ)
 	var content = file.get_as_text()
 	file.close()
 
@@ -18,7 +24,7 @@ func load_json(path: String):
 func save_file(path: String, content: String) -> void:
 	var file = File.new()
 
-	file.open(path, File.WRITE)
+	file.open("user://%s" % path, File.WRITE)
 	file.store_string(content)
 	file.close()
 
