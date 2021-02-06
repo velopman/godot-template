@@ -59,6 +59,17 @@ PhysicsTime="*res://source/autoloads/physics_time.gd"
 SceneManager="*res://source/autoloads/scene_manager.gd"
 TaskManager="*res://source/autoloads/task_manager.gd"
 
+[display]
+
+window/size/width=1280
+window/size/height=720
+window/size/resizable=false
+window/size/test_width=1280
+window/size/test_height=720
+window/stretch/mode="viewport"
+window/stretch/aspect="keep"
+
 [rendering]
 
+quality/2d/use_pixel_snap=true
 environment/default_environment="res://default_env.tres"
