@@ -9,7 +9,7 @@ on:
 
 env:
   GODOT_VERSION: 3.2.3
-  EXPORT_NAME: test-project
+  EXPORT_NAME: godot-template
 
 jobs:
   export-windows:
