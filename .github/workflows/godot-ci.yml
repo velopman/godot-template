@@ -43,7 +43,7 @@ jobs:
       - name: Butler Upload
         uses: josephbmanley/butler-publish-itchio-action@v1.0.2
         env:
-          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_KEY }}
+          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_API_KEY }}
           CHANNEL: windows
           ITCH_GAME: godot-template
           ITCH_USER: velopman
@@ -79,7 +79,7 @@ jobs:
       - name: Butler Upload
         uses: josephbmanley/butler-publish-itchio-action@v1.0.2
         env:
-          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_KEY }}
+          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_API_KEY }}
           CHANNEL: linux
           ITCH_GAME: godot-template
           ITCH_USER: velopman
@@ -115,7 +115,7 @@ jobs:
       - name: Butler Upload
         uses: josephbmanley/butler-publish-itchio-action@v1.0.2
         env:
-          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_KEY }}
+          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_API_KEY }}
           CHANNEL: web
           ITCH_GAME: godot-template
           ITCH_USER: velopman
@@ -152,7 +152,7 @@ jobs:
       - name: Butler Upload
         uses: josephbmanley/butler-publish-itchio-action@v1.0.2
         env:
-          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_KEY }}
+          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_API_KEY }}
           CHANNEL: mac
           ITCH_GAME: godot-template
           ITCH_USER: velopman
