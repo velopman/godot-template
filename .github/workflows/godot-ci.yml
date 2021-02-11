@@ -8,11 +8,8 @@ on:
   workflow_dispatch:
 
 env:
-  BUTLER_CREDENTIALS: ${{ secrets.BUTLER_KEY }}
   EXPORT_NAME: godot-template
   GODOT_VERSION: 3.2.3
-  ITCH_GAME: godot-template
-  ITCH_USER: velopman
 
 jobs:
   export-windows:
@@ -46,7 +43,10 @@ jobs:
       - name: Butler Upload
         uses: josephbmanley/butler-publish-itchio-action@v1.0.2
         env:
+          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_KEY }}
           CHANNEL: windows
+          ITCH_GAME: godot-template
+          ITCH_USER: velopman
           PACKAGE: build/windows
 
   export-linux:
@@ -79,9 +79,11 @@ jobs:
       - name: Butler Upload
         uses: josephbmanley/butler-publish-itchio-action@v1.0.2
         env:
+          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_KEY }}
           CHANNEL: linux
+          ITCH_GAME: godot-template
+          ITCH_USER: velopman
           PACKAGE: build/linux
-          path: build/linux
 
   export-web:
     name: Web Export
@@ -113,7 +115,10 @@ jobs:
       - name: Butler Upload
         uses: josephbmanley/butler-publish-itchio-action@v1.0.2
         env:
+          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_KEY }}
           CHANNEL: web
+          ITCH_GAME: godot-template
+          ITCH_USER: velopman
           PACKAGE: build/web
 
   export-mac:
@@ -149,5 +154,7 @@ jobs:
         env:
           BUTLER_CREDENTIALS: ${{ secrets.BUTLER_KEY }}
           CHANNEL: mac
+          ITCH_GAME: godot-template
+          ITCH_USER: velopman
           PACKAGE: build/mac
           
