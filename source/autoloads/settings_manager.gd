@@ -7,24 +7,27 @@ const SETTINGS_PATH = "settings.json"
 var __settings: Dictionary = {}
 var __settings_default: Dictionary = {
 	"volume": {
-		"master": 1.0,
-		"music": 1.0,
-		"sound_effects": 1.0
+		"Master": 1.0,
+		"Music": 1.0,
+		"Sound Effects": 1.0
 	}
 }
 
 
+# Lifecycle methods
 func _ready() -> void:
 	self.connect("setting_changed", self, "__setting_changed")
-	# try loading settings file first
 	self.__settings = self.__settings_default
 
 	if FileManager.file_exists(self.SETTINGS_PATH):
 		self.__settings = FileManager.load_json(self.SETTINGS_PATH)
+		Logger.info("Loading settings")
 	else:
 		FileManager.save_json(self.SETTINGS_PATH, self.__settings)
+		Logger.info("Creating settings")
 
 
+# Public methods
 func get_setting(name, default = null):
 	var path = name.split("/")
 	var location = self.__settings
@@ -50,10 +53,13 @@ func save_settings() -> void:
 	FileManager.save_json(self.SETTINGS_PATH, self.__settings)
 
 
-func set_setting(name: String, value) -> void:
+func set_setting(name: String, value, save: bool = false) -> void:
 	self.__setting_changed(name, value)
+	if save:
+		self.save_settings()
 
 
+# Private methods
 func __setting_changed(name: String, value) -> void:
 	var path = name.split("/")
 	var location = self.__settings
