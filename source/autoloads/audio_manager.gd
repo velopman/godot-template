@@ -1,5 +1,6 @@
 extends Node
 
+
 var __volume_max: Dictionary = {
 	# key: bus name
 	# value: starting volume
@@ -13,7 +14,7 @@ func _ready() -> void:
 	for key in levels.keys():
 		var index = self.__get_bus_index(key)
 		self.__volume_max[key] = AudioServer.get_bus_volume_db(index)
-		var value = lerp(self.__volume_min, self.__volume_max[key], levels[key])
+		var value: float = lerp(self.__volume_min, self.__volume_max[key], levels[key])
 		AudioServer.set_bus_volume_db(index, value)
 
 
@@ -28,9 +29,9 @@ func get_volume_db(name: String) -> float:
 
 
 func set_volume(name: String, value: float) -> void:
-	var index = self.__get_bus_index(name)
+	var index: int = self.__get_bus_index(name)
 
-	var volume_db = -INF
+	var volume_db: float = -INF
 	if value > 0.0:
 		volume_db = lerp(self.__volume_min, self.__volume_max[name], value)
 	AudioServer.set_bus_volume_db(index, volume_db)

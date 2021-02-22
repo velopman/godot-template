@@ -1,14 +1,12 @@
 extends Node
 
+
 enum Level { DEBUG = 0, INFO, WARN, ERROR }
 
 var __log_level: int = Level.DEBUG
 
 
-func __log(message: String) -> void:
-	print(message)
-
-
+# Public methods
 func set_log_level(level: int) -> void:
 	self.__log_level = level
 
@@ -31,3 +29,8 @@ func warn(message: String) -> void:
 func error(message: String) -> void:
 	if self.__log_level <= Level.ERROR:
 		self.__log("[ERR] %s" % message)
+
+
+# Private methods
+func __log(message: String) -> void:
+	print(message)

@@ -1,5 +1,6 @@
 extends Node
 
+
 signal setting_changed(name, value)
 
 const SETTINGS_PATH = "settings.json"
@@ -29,11 +30,11 @@ func _ready() -> void:
 
 # Public methods
 func get_setting(name, default = null):
-	var path = name.split("/")
-	var location = self.__settings
+	var path: Array = name.split("/")
+	var location: Dictionary = self.__settings
 
 	for index in range(path.size() - 1):
-		var part = path[index]
+		var part: String = path[index]
 
 		if location.has(part):
 			location = location.get(part)
@@ -41,7 +42,7 @@ func get_setting(name, default = null):
 			Logger.warn("Could not get setting '%s'" % name)
 			return default
 
-	var setting_name = path[path.size() - 1]
+	var setting_name: String = path[path.size() - 1]
 	if location.has(setting_name):
 		return location.get(setting_name)
 	else:
@@ -61,11 +62,11 @@ func set_setting(name: String, value, save: bool = false) -> void:
 
 # Private methods
 func __setting_changed(name: String, value) -> void:
-	var path = name.split("/")
-	var location = self.__settings
+	var path: Array = name.split("/")
+	var location: Dictionary = self.__settings
 
 	for index in range(path.size() - 1):
-		var part = path[index]
+		var part: String = path[index]
 
 		if location.has(part):
 			location = location.get(part)
@@ -73,7 +74,7 @@ func __setting_changed(name: String, value) -> void:
 			Logger.warn("Could not update setting '%s'" % name)
 			return
 
-	var setting_name = path[path.size() - 1]
+	var setting_name: String = path[path.size() - 1]
 	if location.has(setting_name):
 		location[setting_name] = value
 	else:

@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "BaseTask",
 "language": "GDScript",
-"path": "res://source/tasks/base_task.gd"
+"path": "res://source/helpers/tasks/base_task.gd"
 }, {
 "base": "Reference",
 "class": "CurrentQueue",
@@ -27,12 +27,12 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "Task",
 "language": "GDScript",
-"path": "res://source/tasks/task.gd"
+"path": "res://source/helpers/tasks/task.gd"
 }, {
 "base": "Reference",
 "class": "TaskQueue",
 "language": "GDScript",
-"path": "res://source/tasks/task_queue.gd"
+"path": "res://source/helpers/tasks/task_queue.gd"
 } ]
 _global_script_class_icons={
 "BaseTask": "",

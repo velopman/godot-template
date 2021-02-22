@@ -1,5 +1,6 @@
 extends Time
 
 
-func _ready() -> void:
+# Lifecycle methods
+func _init() -> void:
 	self._process_physics = true

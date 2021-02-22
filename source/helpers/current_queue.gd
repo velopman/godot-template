@@ -5,15 +5,17 @@ var __default = null
 var __queue: Array = []
 
 
-func _init( default = null ) -> void:
+# Lifecycle methods
+func _init(default = null) -> void:
 	self.__default = default
 
 
-func add( value ) -> bool:
+# Public methods
+func add(value) -> bool:
 	if value in self.__queue:
 		return false
 
-	self.__queue.append( value )
+	self.__queue.append(value)
 	return true
 
 
@@ -24,10 +26,10 @@ func current():
 	return self.__default
 
 
-func remove( value ) -> bool:
-	var index: int = self.__queue.find( value )
+func remove(value) -> bool:
+	var index: int = self.__queue.find(value)
 	if index == -1:
 		return false
 
-	self.__queue.remove( index )
+	self.__queue.remove(index)
 	return true

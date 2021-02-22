@@ -1,8 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://source/menus/components/slider_volume.tscn" type="PackedScene" id=1]
-[ext_resource path="res://temp/music.ogg" type="AudioStream" id=2]
-[ext_resource path="res://temp/sound_effect.ogg" type="AudioStream" id=3]
 
 [node name="menu_settings" type="Control"]
 anchor_right = 1.0
@@ -45,13 +43,3 @@ margin_right = 250.0
 margin_bottom = 56.0
 display_name = "Sound Effects"
 controlled_bus = "Sound Effects"
-
-[node name="music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 2 )
-autoplay = true
-bus = "Music"
-
-[node name="sound_effects" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
-autoplay = true
-bus = "Sound Effects"
