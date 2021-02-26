@@ -61,6 +61,7 @@ PhysicsTime="*res://source/autoloads/physics_time.gd"
 SceneManager="*res://source/autoloads/scene_manager.tscn"
 TaskManager="*res://source/autoloads/task_manager.gd"
 AudioManager="*res://source/autoloads/audio_manager.gd"
+InputManager="*res://source/autoloads/input_manager.gd"
 DebugManager="*res://source/autoloads/debug_manager.gd"
 
 [display]
