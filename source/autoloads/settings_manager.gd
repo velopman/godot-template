@@ -11,7 +11,8 @@ var __settings_default: Dictionary = {
 		"Master": 1.0,
 		"Music": 1.0,
 		"Sound Effects": 1.0
-	}
+	},
+	"input": {}
 }
 
 
