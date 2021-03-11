@@ -77,4 +77,5 @@ window/stretch/aspect="keep"
 [rendering]
 
 quality/2d/use_pixel_snap=true
+environment/default_clear_color=Color( 0.533333, 0.482353, 0.690196, 1 )
 environment/default_environment="res://default_env.tres"
